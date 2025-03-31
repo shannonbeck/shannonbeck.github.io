@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preparing for the SANS GREM Exam</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+<h1>Preparing for the SANS GIAC Reverse Engineering in Malware (GREM) Exam</h1>
+<p>In 2024, I took the 6-day SANS For610 "<a href="https://www.sans.org/cyber-security-courses/reverse-engineering-malware-malware-analysis-tools-techniques/" target="_blank">Reverse-Engineering Malware: Malware Analysis Tools and Techniques</a>" course. This intensive course was really an opening to understanding Windows OS internals and fundamentals needed for reverse engineering (RE). I successfully passed the exam in early 2025.  </p>
+
+
+<p>In preparing for the GREM exam, I spent many hours re-reading and re-watching videos. I also used the following resources in my prepation of my exam index (all 543 entries), and I am passing them along in case they can help you in your RE journey.</p>
+
+<p>Many thanks to <a href="https://zeltser.com/" target="_blank">Lenny Zeltser</a> for many of the resources listed below, as well course content in addition to <a href="https://www.linkedin.com/in/sonianuj/" target="_blank">Anuj Soni</a>.</p>
+    <h2>Cheat Sheets</h2>
+    <table>
+        <tr>
+            <th>Printables</th>
+            <th>Description</th>
+            <th>URL (Mainly Horizontal 3-Column Sheets)</th>
+            <th>Vertical Version (2-Column Sheets)</th>
+        </tr>
+        <tr>
+            <td>ASCII Table</td>
+            <td>dec/hex/oct/char table for ASCII</td>
+            <td><a href="https://alpharithms.s3.amazonaws.com/assets/img/ascii-chart/ascii-table-alpharithms-scaled.jpg" target="_blank">Link</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>SANS List of Cheat Sheets</td>
+            <td>Overview of all Sans Cheat Sheets</td>
+            <td><a href="https://www.sans.org/blog/the-ultimate-list-of-sans-cheat-sheets/" target="_blank">Link</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>SANS 4 Cheat Sheets for Malware Analysis</td>
+            <td>Sans Institute Sheets</td>
+            <td><a href="https://www.sans.org/blog/4-cheat-sheets-for-malware-analysis/" target="_blank">Link</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Documents</td>
+            <td>Analyzing Malicious Documents Cheat Sheet</td>
+            <td><a href="https://zeltser.com/analyzing-malicious-documents/" target="_blank">Link</a></td>
+            <td><a href="https://sansorg.egnyte.com/dl/YrwOdFIm1I" target="_blank">Link</a></td>
+        </tr>
+        <tr>
+            <td>RE Tips Sheet</td>
+            <td>Tips For Reverse-Engineering Malicious Code</td>
+            <td><a href="https://zeltser.com/media/docs/reverse-engineering-malicious-code-tips.pdf" target="_blank">Link</a></td>
+            <td><a href="https://sansorg.egnyte.com/dl/pHqHxaLC5M" target="_blank">Link</a></td>
+        </tr>
+        <tr>
+            <td>Remnux Linux Usage</td>
+            <td>Remnux Usage Tips For Malware Analysis On Linux</td>
+            <td><a href="https://zeltser.com/media/docs/remnux-malware-analysis-tips.pdf" target="_blank">Link</a></td>
+            <td><a href="https://sansorg.egnyte.com/dl/X7Hif4acY0" target="_blank">Link</a></td>
+        </tr>
+        <tr>
+            <td>RE Cheat Sheet</td>
+            <td>Malware Analysis & Reverse Engineering Cheat Sheet</td>
+            <td><a href="https://zeltser.com/media/docs/malware-analysis-cheat-sheet.pdf" target="_blank">Link</a></td>
+            <td><a href="https://sansorg.egnyte.com/dl/suRa4RLonp" target="_blank">Link</a></td>
+        </tr>
+        <tr>
+            <td>HEX and RegEx</td>
+            <td>Hex File Headers and Regex for Forensics Cheat Sheet v1.0</td>
+            <td><a href="https://sansorg.egnyte.com/dl/ZvGHqvRS3X" target="_blank">Link</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>oledump Cheat Sheet</td>
+            <td>oledump.py Quick Reference</td>
+            <td><a href="https://www.sans.org/posters/oledump-py-quick-reference/" target="_blank">Link</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Ghidra Cheat Sheet</td>
+            <td>Basic commands</td>
+            <td><a href="https://ghidra-sre.org/CheatSheet.html" target="_blank">Link</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>x86-64 Reference Sheet</td>
+            <td>General x86-64 reference guide from Stanford CS107</td>
+            <td><a href="https://web.stanford.edu/class/cs107/resources/x86-64-reference.pdf" target="_blank">Link</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>x86 (32-bit)</td>
+            <td>Reverse Engineering for Malware Analysis Cheat Sheet</td>
+            <td><a href="https://imgur.com/aGIcog2" target="_blank">Link</a></td>
+            <td></td>
+        </tr>
+    </table>
+    
+    
+    <h2>Additional Printables</h2>
+	Not specific to the GREM exam, but helpful for RE learning.
+  <table>
+        <tr>
+            <th>Short Name</th>
+            <th>Description</th>
+            <th>URL</th>
+        </tr>
+        <tr>
+            <td>Memory Forensics</td>
+            <td>Tips and commands for Memory Forensics</td>
+            <td><a href="https://www.sans.org/blog/memory-forensics-cheat-sheet/" target="_blank">Link</a></td>
+        </tr>
+        <tr>
+            <td>Pivoting</td>
+            <td>Pivoting Cheat Sheet v1.2</td>
+            <td><a href="https://sansorg.egnyte.com/dl/kZpaAx3eX0" target="_blank">Link</a></td>
+        </tr>
+        <tr>
+            <td>Google Dorking</td>
+            <td>Google Dorking Hacking and Defense Cheat Sheet</td>
+            <td><a href="https://www.sans.org/posters/google-hacking-and-defense-cheat-sheet/" target="_blank">Link</a></td>
+        </tr>
+        <tr>
+            <td>Pen Testing</td>
+            <td>PowerShell Cheat Sheet v. 4.0</td>
+            <td><a href="https://www.sans.org/blog/sans-pen-test-cheat-sheet-powershell/" target="_blank">Link</a></td>
+        </tr>
+        <tr>
+            <td>TCP/IP and tcpdump</td>
+            <td>TCP/IP and tcpdump Pocket Reference Guide Jan 2024</td>
+            <td><a href="https://sansorg.egnyte.com/dl/2BjQFec1dS" target="_blank">Link</a></td>
+        </tr>
+    </table>
+    
+    <h2>Online Resources</h2>
+	Additional resources. Cyber Chef is available for download and that can be helpful for offline processing.
+    <table>
+        <tr>
+            <th>Online Resource</th>
+            <th>Description</th>
+            <th>URL</th>
+        </tr>
+        <tr>
+            <td>Cyber Chef</td>
+            <td>Decode/encode many different values/protocols/more</td>
+            <td><a href="https://cyberchef.org/" target="_blank">Link</a></td>
+        </tr>
+        <tr>
+            <td>ASCII Tables</td>
+            <td>ASCII code tables</td>
+            <td><a href="https://www.rapidtables.com/" target="_blank">Link</a></td>
+        </tr>
+        <tr>
+            <td>Visual Subnet Calculator</td>
+            <td>Given an IP space in CIDR format, plan subnets with helpful visual interface</td>
+            <td><a href="https://www.davidc.net/sites/default/subnets/subnets.html" target="_blank">Link</a></td>
+        </tr>
+        <tr>
+            <td>x64 prolog and epilog</td>
+            <td>Overview of pro- and epilogue in x64</td>
+            <td><a href="https://learn.microsoft.com/en-us/cpp/build/prolog-and-epilog?view=msvc-170" target="_blank">Link</a></td>
+        </tr>
+    </table>
+  
+  
+</body>
+</html>
